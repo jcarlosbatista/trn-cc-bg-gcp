@@ -25,7 +25,12 @@ Here is the summary of what is going to be covered on this day.
 
 ### first steps on gcp console
 ```shell
-# https://console.cloud.google.com/getting-started?organizationId=132540565286&pli=1&login=true&authuser=1
+https://console.cloud.google.com/getting-started?organizationId=132540565286&pli=1&login=true&authuser=1
+
+- project & billing
+- view products
+- api
+- vpc 
 ```
 
 ### Google Cloud Storage
