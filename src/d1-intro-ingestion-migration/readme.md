@@ -89,7 +89,13 @@ gcloud storage buckets delete gs://owshq-gcloud-landing-zone
 
 ### use terraform to build infrastructure
 ```shell
+# build multi-cloud infrastructure
+https://www.terraform.io/
+https://registry.terraform.io/
 
+# provider & modules
+https://registry.terraform.io/providers/hashicorp/google/latest/docs
+https://github.com/hashicorp/terraform-provider-google
 ```
 
 
