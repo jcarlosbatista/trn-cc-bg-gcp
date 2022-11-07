@@ -25,12 +25,35 @@ Here is the summary of what is going to be covered on this day.
 
 ### first steps on gcp console
 ```shell
+# access console
 https://console.cloud.google.com/getting-started?organizationId=132540565286&pli=1&login=true&authuser=1
 
+# overview
 - project & billing
 - view products
 - api
 - vpc 
+```
+
+### using gcloud to interact with services
+```shell
+# info
+https://cloud.google.com/sdk/gcloud
+
+# gcloud cli cheat sheet
+https://cloud.google.com/sdk/docs/cheatsheet
+
+# install gcloud cli
+https://cloud.google.com/sdk/docs/install
+
+# init config & validate
+gcloud init
+gcloud auth list
+gcloud config list project
+
+# explore
+gcloud --help
+gcloud
 ```
 
 ### Google Cloud Storage
