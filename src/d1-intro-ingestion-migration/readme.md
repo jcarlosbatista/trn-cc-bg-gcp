@@ -23,6 +23,11 @@ Here is the summary of what is going to be covered on this day.
 - *Navigate Through The Identity & Access Management*
 - *Use Terraform to Build Services*
 
+### first steps on gcp console
+```shell
+# https://console.cloud.google.com/getting-started?organizationId=132540565286&pli=1&login=true&authuser=1
+```
+
 ### Google Cloud Storage
 [Parte 2 - Google Cloud Storage (GCS)](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.2_gcs.excalidraw.png).
 
