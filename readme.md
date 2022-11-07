@@ -11,7 +11,7 @@
 
 </div>
 
-Welcome to Big Data on GCP Training, provide by Engenharia de Dados Academy, in this training you will learn about how to create data pipelines using Google GCP, and understand more about which data products we have on GCP that can help data engineers solve business problems.
+Welcome to Big Data on GCP Training, provided by Engenharia de Dados Academy, in this training you will learn about how to create data pipelines using Google GCP, and understand more about which data products we have on GCP that can help data engineers to solve business problems.
 
 
 ### Roadmap
