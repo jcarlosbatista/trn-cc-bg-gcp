@@ -57,6 +57,18 @@ gcloud --help
 gcloud
 ```
 
+### understanding how to use the google cloud python client
+```shell
+# google's python client 
+https://github.com/googleapis/google-cloud-python/blob/main/README.rst
+
+- available libraries
+- examples
+
+# authentication 
+https://cloud.google.com/docs/authentication/client-libraries
+```
+
 ### Google Cloud Storage
 [Parte 2 - Google Cloud Storage (GCS)](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.2_gcs.excalidraw.png).
 
