@@ -170,7 +170,6 @@ SELECT *
 FROM `silver-charmer-243611.OneWaySolution.events-music` LIMIT 1000
 ```
 
-
 ### Google Cloud SQL & DMS
 [Parte 4 - Google Cloud SQL & DMS](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.4_cloud_sql_dms.excalidraw.png).
 
