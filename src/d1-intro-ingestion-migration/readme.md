@@ -106,6 +106,14 @@ https://github.com/hashicorp/terraform-provider-google
 - *Creating a Google Cloud Storage Bucket*
 - *Configure Data Lake using Best Practices*
 
+### ingestion python app [data-gen-datastores]
+```python
+# google cloud storage
+print(GoogleCloudStorage(entity="Users", rows=700).write())
+print(GoogleCloudStorage(entity="Transactions", rows=300).write())
+print(GoogleCloudStorage(entity="Stocks", rows=100).write())
+```
+
 
 ### Google Cloud Pub/Sub
 [Parte 3 - Google Cloud Pub/Sub](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.3_pub_sub.excalidraw.png).
