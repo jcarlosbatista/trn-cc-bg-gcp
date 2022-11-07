@@ -15,6 +15,7 @@ Here is the summary of what is going to be covered on this day.
 
 
 ### Google Cloud Platform [GCP]
+[Day 1 - Introdução, Ingestão e Migração de Dados](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.1_gcp_introduction.excalidraw.png.png).
 
 - *First Sight at Google Cloud Console*
 - *Using GCloud to Interact with Services*
