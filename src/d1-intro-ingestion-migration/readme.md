@@ -24,9 +24,24 @@ Here is the summary of what is going to be covered on this day.
 
 ### Google Cloud Storage
 
+- *Ingestion App to Create Files on GCS*
+- *Creating a Google Cloud Storage Bucket*
+- *Configure Data Lake using Best Practices*
+
+
 ### Google Cloud Pub/Sub
+
+- *Publish Messages using Python App for Real-Time Ingestion*
+- *Publish & Subscription Types*
+- *Pub/Sub to BigQuery*
 
 ### Google Cloud SQL & DMS
 
+- *Walk-Through: Google Cloud SQL*
+- *Migrate a Postgres Database to Cloud SQL using DMS*
+
 ### Data Transfers
 
+- *Move Data from Blob Storage to GCS using Storage Transfer Service*
+- *Transfer from S3 to BigQuery using BigQuery Data Transfer Service*
+- *Sync-Up Data from Different Sources into GCS using AirByte*
