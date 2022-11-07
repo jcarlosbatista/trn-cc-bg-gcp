@@ -114,6 +114,19 @@ print(GoogleCloudStorage(entity="Transactions", rows=300).write())
 print(GoogleCloudStorage(entity="Stocks", rows=100).write())
 ```
 
+### create gcs buckets for zones using best practices
+```shell
+# name of the buckets to create
+owshq-landing-zone
+owshq-processing-zone
+owshq-curated-zone
+owshq-archive-zone
+
+# bucket creation
+# AutoClass Manager
+gcloud storage buckets create --help 
+```
+
 
 ### Google Cloud Pub/Sub
 [Parte 3 - Google Cloud Pub/Sub](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.3_pub_sub.excalidraw.png).
@@ -121,6 +134,42 @@ print(GoogleCloudStorage(entity="Stocks", rows=100).write())
 - *Publish Messages using Python App for Real-Time Ingestion*
 - *Publish & Subscription Types*
 - *Pub/Sub to BigQuery*
+
+
+### publish messages into pub/sub
+```shell
+# important links
+https://cloud.google.com/pubsub/docs/create-subscription
+
+# create & list topics
+gcloud pubsub topics create src-py-app-users-events-json
+gcloud pubsub topics list
+
+# publish messages
+https://cloud.google.com/pubsub/docs/publisher
+ingestion-data-stores-app
+python3.9 cli.py 'pubsub-music-events'
+
+# housekeeping
+gcloud pubsub topics delete src-py-app-users-events-json
+```
+
+
+### publish messages into bigquery
+```shell
+# create bigquery subscription = sbscpt-big-query
+# set permissions to account
+service-568528137488@gcp-sa-pubsub.iam.gserviceaccount.com
+
+# create table [OneWaySolution]
+# field data as string
+events-music
+
+# https://cloud.google.com/bigquery/docs/reference/standard-sql/json_functions
+SELECT *
+FROM `silver-charmer-243611.OneWaySolution.events-music` LIMIT 1000
+```
+
 
 ### Google Cloud SQL & DMS
 [Parte 4 - Google Cloud SQL & DMS](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.4_cloud_sql_dms.excalidraw.png).
