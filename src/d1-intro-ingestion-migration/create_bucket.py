@@ -22,5 +22,21 @@ def create_bucket_class_location(bucket_name):
     )
     return new_bucket
 
-# invoke function
-c
+
+def delete_bucket(bucket_name):
+    """Deletes a bucket. The bucket must be empty."""
+    # bucket_name = "your-bucket-name"
+
+    storage_client = storage.Client()
+
+    bucket = storage_client.get_bucket(bucket_name)
+    bucket.delete()
+
+    print(f"bucket {bucket.name} deleted")
+
+
+# create bucket
+# create_bucket_class_location(bucket_name='owshq-py-landing-zone')
+
+# delete bucket
+delete_bucket(bucket_name='owshq-py-landing-zone')

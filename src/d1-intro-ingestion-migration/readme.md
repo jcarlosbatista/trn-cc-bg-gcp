@@ -75,18 +75,21 @@ https://cloud.google.com/docs/authentication/client-libraries
 # install requirements
 pip install -r requirements.txt
 
-# create bucket
+# interact with bucket
 https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/src/d1-intro-ingestion-migration/create_bucket.py
+https://cloud.google.com/storage/docs/deleting-buckets#storage-delete-bucket-python
 ```
 
 ### use gcloud to spin-up a service on cloud shell
 ```shell
-# create bucket
-gcloud storage buckets create gs://owshq-gcp-landing-zone
+# interact with bucket
+gcloud storage buckets create gs://owshq-gcloud-landing-zone
+gcloud storage buckets delete gs://owshq-gcloud-landing-zone
 ```
 
 ### use terraform to build infrastructure
 ```shell
+
 ```
 
 
