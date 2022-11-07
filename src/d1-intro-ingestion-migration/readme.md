@@ -5,6 +5,7 @@
 </p>
 
 
+# Summary
 Here is the summary of what is going to be covered on this day.
 
 * Introduction and history about the GCP provider
