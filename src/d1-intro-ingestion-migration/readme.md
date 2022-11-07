@@ -16,6 +16,12 @@ Here is the summary of what is going to be covered on this day.
 
 ### Google Cloud Platform [GCP]
 
+- *First Sight at Google Cloud Console*
+- *Using GCloud to Interact with Services*
+- *Use Python to Interact with Services*
+- *Navigate Through The Identity & Access Management*
+- *Use Terraform to Build Services*
+
 ### Google Cloud Storage
 
 ### Google Cloud Pub/Sub
