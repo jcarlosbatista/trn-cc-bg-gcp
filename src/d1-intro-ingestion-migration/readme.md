@@ -76,7 +76,7 @@ https://cloud.google.com/docs/authentication/client-libraries
 pip install -r requirements.txt
 
 # create bucket
-/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d1-intro-ingestion-migration/create_bucket.py
+https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/src/d1-intro-ingestion-migration/create_bucket.py
 ```
 
 ### use gcloud to spin-up a service on cloud shell
