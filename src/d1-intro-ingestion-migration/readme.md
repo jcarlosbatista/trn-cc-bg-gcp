@@ -15,7 +15,7 @@ Here is the summary of what is going to be covered on this day.
 
 
 ### Google Cloud Platform [GCP]
-[Day 1 - Introdução, Ingestão e Migração de Dados](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.1_gcp_introduction.excalidraw.png).
+[Parte 1 - Introdução ao Google Cloud Platform (GCP)](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.1_gcp_introduction.excalidraw.png).
 
 - *First Sight at Google Cloud Console*
 - *Using GCloud to Interact with Services*
@@ -24,6 +24,7 @@ Here is the summary of what is going to be covered on this day.
 - *Use Terraform to Build Services*
 
 ### Google Cloud Storage
+[Parte 2 - Google Cloud Storage (GCS)](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.2_gcs.excalidraw.png).
 
 - *Ingestion App to Create Files on GCS*
 - *Creating a Google Cloud Storage Bucket*
@@ -31,17 +32,20 @@ Here is the summary of what is going to be covered on this day.
 
 
 ### Google Cloud Pub/Sub
+[Parte 3 - Google Cloud Pub/Sub](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.3_pub_sub.excalidraw.png).
 
 - *Publish Messages using Python App for Real-Time Ingestion*
 - *Publish & Subscription Types*
 - *Pub/Sub to BigQuery*
 
 ### Google Cloud SQL & DMS
+[Parte 4 - Google Cloud SQL & DMS](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.4_cloud_sql_dms.excalidraw.png).
 
 - *Walk-Through: Google Cloud SQL*
 - *Migrate a Postgres Database to Cloud SQL using DMS*
 
 ### Data Transfers
+[Parte 5 - Data Transfers](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.5_data_transfers.excalidraw.png).
 
 - *Move Data from Blob Storage to GCS using Storage Transfer Service*
 - *Transfer from S3 to BigQuery using BigQuery Data Transfer Service*
