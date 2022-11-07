@@ -69,6 +69,27 @@ https://github.com/googleapis/google-cloud-python/blob/main/README.rst
 https://cloud.google.com/docs/authentication/client-libraries
 ```
 
+### use python api to spin-up a service
+```shell
+# virtual env [pycharm]
+# install requirements
+pip install -r requirements.txt
+
+# create bucket
+/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d1-intro-ingestion-migration/create_bucket.py
+```
+
+### use gcloud to spin-up a service on cloud shell
+```shell
+# create bucket
+gcloud storage buckets create gs://owshq-gcp-landing-zone
+```
+
+### use terraform to build infrastructure
+```shell
+```
+
+
 ### Google Cloud Storage
 [Parte 2 - Google Cloud Storage (GCS)](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d1.2_gcs.excalidraw.png).
 
