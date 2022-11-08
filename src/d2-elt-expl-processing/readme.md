@@ -190,5 +190,10 @@ entry point = cf-py-gcs-metadata
 
 - *Building Data Pipelines using Data Fusion UI*
 
+```shell
+# data fusion
+name = owshq-data-fusion-development
+edition = developer
 
+```
 
