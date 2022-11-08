@@ -150,6 +150,40 @@ FROM `silver-charmer-243611.OneWaySolution.enriched-user-events` LIMIT 1000
 
 - *Building a Reactive Metadata Pipeline using Python Provider*
 
+```shell
+# specification to describe event data
+https://cloudevents.io/
+
+# functions framework for python
+# write lightweight functions that run in many different environments
+# cloud functions, local, cloud run, anthos
+# knative envs
+https://github.com/GoogleCloudPlatform/functions-framework-python
+
+# samples
+https://github.com/GoogleCloudPlatform/python-docs-samples/tree/main/functions
+
+# build the cloud function using 2nd gen
+https://cloud.google.com/functions/docs/concepts/version-comparison
+
+* longer request processing times
+* larger instance sizes
+* improved concurrency
+* traffic management
+* eventarc integration [https://cloud.google.com/eventarc/docs]
+* broader cloud events support [https://cloudevents.io/]
+
+# info about the google cloud function
+# https://cloud.google.com/functions/docs/samples/functions-cloudevent-storage
+# https://cloud.google.com/functions/docs/tutorials/storage
+# https://github.com/googleapis/google-cloudevents
+name = cf-py-gcs-metadata
+region = us-central1
+event provider = cloud storage [eventarc]
+event type = storage.buckets.create
+entry point = cf-py-gcs-metadata
+```
+
 
 ### Google Cloud Data Fusion
 [Parte 5 - Google Cloud Data Fusion](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d2.5_data_fusion.excalidraw.png).
