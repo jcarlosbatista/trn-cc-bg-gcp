@@ -86,3 +86,12 @@ https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/src/d2-elt-expl-proces
 # deploy on spark serverless engine
 https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/src/d2-elt-expl-processing/pyspark-yelp-elt-py/py-etl-yelp-reviews.py
 ```
+
+### Google DataFlow
+[Parte 3 - Google DataFlow](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d2.3_data_flow.excalidraw.png).
+
+- *Writing a Pipeline using Python on Google DataFlow*
+
+```shell
+
+```
