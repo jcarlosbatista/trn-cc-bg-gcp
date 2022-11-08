@@ -15,11 +15,7 @@ def create_bucket_class_location(bucket_name):
     bucket.storage_class = "COLDLINE"
     new_bucket = storage_client.create_bucket(bucket, location="us")
 
-    print(
-        "created bucket {} in {} with storage class {}".format(
-            new_bucket.name, new_bucket.location, new_bucket.storage_class
-        )
-    )
+    print("created bucket {} in {} with storage class {}".format(new_bucket.name, new_bucket.location, new_bucket.storage_class))
     return new_bucket
 
 
@@ -39,4 +35,4 @@ def delete_bucket(bucket_name):
 # create_bucket_class_location(bucket_name='owshq-py-landing-zone')
 
 # delete bucket
-delete_bucket(bucket_name='owshq-py-landing-zone')
+# delete_bucket(bucket_name='owshq-py-landing-zone')
