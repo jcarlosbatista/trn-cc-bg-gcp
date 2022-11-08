@@ -1,6 +1,7 @@
 # https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline
-# PCollection =
-# PTransform =
+# https://medium.com/analytics-vidhya/transform-json-to-csv-from-google-bucket-using-a-dataflow-python-pipeline-92906c87cc96
+# PCollection = Collection fo Distributed data
+# PTransform = Transformation using One or More PCollections
 # ParDo = Generic Parallel Processing
 
 # import libraries

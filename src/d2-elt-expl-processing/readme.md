@@ -149,3 +149,12 @@ FROM `silver-charmer-243611.OneWaySolution.enriched-user-events` LIMIT 1000
 [Parte 4 - Google Cloud Functions](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d2.4_cloud_functions.excalidraw.png).
 
 - *Building a Reactive Metadata Pipeline using Python Provider*
+
+
+### Google Cloud Data Fusion
+[Parte 5 - Google Cloud Data Fusion](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d2.5_data_fusion.excalidraw.png).
+
+- *Building Data Pipelines using Data Fusion UI*
+
+
+
