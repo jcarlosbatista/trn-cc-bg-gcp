@@ -144,3 +144,8 @@ FROM `silver-charmer-243611.OneWaySolution.enriched-user-events` LIMIT 1000
 SELECT *
 FROM `silver-charmer-243611.OneWaySolution.enriched-user-events` LIMIT 1000
 ```
+
+### Google Cloud Functions
+[Parte 4 - Google Cloud Functions](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d2.4_cloud_functions.excalidraw.png).
+
+- *Building a Reactive Metadata Pipeline using Python Provider*
