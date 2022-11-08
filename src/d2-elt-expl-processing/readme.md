@@ -93,5 +93,52 @@ https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/src/d2-elt-expl-proces
 - *Writing a Pipeline using Python on Google DataFlow*
 
 ```shell
+# python sdk
+https://beam.apache.org/documentation/sdks/python/
+https://beam.apache.org/releases/pydoc/current/
 
+# env validation
+python --version
+python 3.9.15
+
+pip --version
+pip 21.1.2 from /Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/venv/lib/python3.9/site-packages/pip (python 3.9)
+
+# examples libraries
+https://github.com/apache/beam/tree/master/sdks/python/apache_beam/examples
+
+# simulate
+https://cloud.google.com/sdk/gcloud/reference/beta/emulators/
+
+# start app 
+# local runner = direct runner
+/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d2-elt-expl-processing/python-beam-etl
+python stream.py --runner DirectRunner 
+
+# move to dataflow engine
+ gcloud dataflow --help
+ 
+# view info
+gcloud dataflow jobs list    
+
+# deploy app
+python - m stream.py \
+  --stream \
+  --runner DataflowRunner \
+  --project silver-charmer-243611 \
+  --region us-east1 \
+  --temp_location gs://owshq-dataflow-staging/ \
+  --job_name dataflow-py-beam-stream-user-events
+
+# view job
+gcloud dataflow jobs describe 2022-11-08_09_12_44-6400260458855607177 --region us-central1
+gcloud --format=json dataflow jobs describe
+```
+
+```sql
+SELECT COUNT(*)
+FROM `silver-charmer-243611.OneWaySolution.enriched-user-events` LIMIT 1000
+
+SELECT *
+FROM `silver-charmer-243611.OneWaySolution.enriched-user-events` LIMIT 1000
 ```
