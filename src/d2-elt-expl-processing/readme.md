@@ -119,7 +119,7 @@ python stream.py --runner DirectRunner
  gcloud dataflow --help
  
 # view info
-gcloud dataflow jobs list    
+gcloud dataflow jobs list --region us-east1    
 
 # deploy app
 python - m stream.py \
@@ -131,8 +131,10 @@ python - m stream.py \
   --job_name dataflow-py-beam-stream-user-events
 
 # view job
-gcloud dataflow jobs describe 2022-11-08_09_12_44-6400260458855607177 --region us-central1
-gcloud --format=json dataflow jobs describe
+gcloud --format=json dataflow jobs describe 2022-11-08_09_12_44-6400260458855607177 --region us-east1
+
+# delete streaming job [cancel]
+gcloud dataflow jobs cancel 2022-11-08_09_12_44-6400260458855607177 --region us-east1    
 ```
 
 ```sql
