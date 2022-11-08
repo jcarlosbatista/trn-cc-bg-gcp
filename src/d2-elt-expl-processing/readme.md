@@ -69,3 +69,9 @@ job 16448067
 # folder
 dataprep-staging-90c18422-2e89-4be8-ba33-5d2a4e00bf74
 ```
+
+### Google DataProc
+[Parte 2 - Google DataProc](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d2.2_data_proc.excalidraw.png).
+
+- *Deploying and Executing a PySpark App on Google DataProc ServerLess*
+
