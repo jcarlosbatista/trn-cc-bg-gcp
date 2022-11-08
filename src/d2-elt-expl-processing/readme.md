@@ -75,3 +75,10 @@ dataprep-staging-90c18422-2e89-4be8-ba33-5d2a4e00bf74
 
 - *Deploying and Executing a PySpark App on Google DataProc ServerLess*
 
+```shell
+# build local spark application
+/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d2-elt-expl-processing/pyspark-yelp-elt-py/local.py
+
+# deploy on spark serverless engine
+/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d2-elt-expl-processing/pyspark-yelp-elt-py/py-etl-yelp-reviews.py
+```
