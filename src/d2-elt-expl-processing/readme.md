@@ -34,14 +34,23 @@ users landing zone & users BigQuery engine
 
 # add to new flow
 # build connections
-postgres
-159.89.244.91:5432
-owshq
-postgres
-6e8e5979-25c5-44e2-ad76-7a4e8ee68c6f
+type = mongodb
+ip = 45.55.97.53
+db = owshq
+auth db = admin
+user = root
+
+type = postgres
+ip = 159.89.244.91:5432
+db = owshq
+user = postgres
 
 # add recipe
 # search for transformations
 # unnest objects into colum
 users events [BigQuery]
+
+# flow of One Way Solution
+mongodb = users
+bigquery = users
 ```
