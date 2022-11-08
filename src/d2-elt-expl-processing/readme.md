@@ -51,6 +51,21 @@ user = postgres
 users events [BigQuery]
 
 # flow of One Way Solution
-mongodb = users
-bigquery = users
+* source
+mongodb = users [Users from MongoDB]
+bigquery = users [Users Event from BigQuery]
+
+* transformations
+- unnest objects
+- join databases
+
+* output & actions
+- running environment (trifacta photon & dataflow)
+- json new file every run [gcs]
+
+# validate job history
+job 16448067
+
+# folder
+dataprep-staging-90c18422-2e89-4be8-ba33-5d2a4e00bf74
 ```
