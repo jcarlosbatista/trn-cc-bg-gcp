@@ -157,8 +157,125 @@ https://cloud.google.com/bigtable/docs/writing-data#python
 https://cloud.google.com/bigtable/docs/writes#simple
 https://itnext.io/pubsub-to-bigtable-piping-your-data-stream-in-via-gcp-cloud-functions-a2ef785935b5
 
-# usual implementers
+# implementers
 * python
 * cloud functions
 * dataflow
+```
+
+### Google BigQuery
+[Parte 4 - Google BigQuery](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/).
+
+- *Load Files from Storage [GCS] (JSON) into BigQuery*
+- *Create a clustered table faster access*
+- *Build snapshot of a table*
+- *Build materialized views*
+- *Query external data sources*
+
+```shell
+# how to guides
+how-to-guides
+https://cloud.google.com/bigquery/docs/how-to
+
+# bigquery ui
+https://console.cloud.google.com/bigquery
+
+# cli for the big query engine
+bq --help
+
+# https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json
+# users
+bq load \
+--source_format=NEWLINE_DELIMITED_JSON --autodetect \
+OneWaySolution.yelp-users-json \
+gs://owshq-landing-zone/files/users/yelp_academic_dataset_user_2021.json
+
+# reviews
+bq load \
+--source_format=NEWLINE_DELIMITED_JSON --autodetect \
+OneWaySolution.yelp-reviews-json \
+gs://owshq-landing-zone/files/reviews/yelp_academic_dataset_review_1.json
+
+# delete bigquery tables
+OneWaySolution.yelp-users-json
+OneWaySolution.yelp-reviews-json
+```
+
+```sql
+SELECT COUNT(*) 
+FROM `silver-charmer-243611.OneWaySolution.yelp-users-json`;
+
+SELECT COUNT(*) 
+FROM `silver-charmer-243611.OneWaySolution.yelp-reviews-json`;
+```
+
+```sql
+-- improve query performance and reduce query costs.
+-- queries commonly filter on particular columns
+-- filter on columns that have many distinct values
+-- strict cost estimates before query execution
+-- automatic reclustering = performs automatic reclustering in the background
+SELECT *
+FROM `silver-charmer-243611.OneWaySolution.yelp-reviews-json`
+LIMIT 10;
+
+-- 2019-02-17
+SELECT DATE(date), COUNT(*) AS q
+FROM `silver-charmer-243611.OneWaySolution.yelp-reviews-json`
+GROUP BY DATE(date)
+ORDER BY q DESC;
+
+
+CREATE TABLE `silver-charmer-243611.OneWaySolution.clustered-yelp-reviews`
+(
+  date TIMESTAMP,
+  useful INTEGER,
+)
+CLUSTER BY date AS 
+(
+  SELECT date, useful FROM `silver-charmer-243611.OneWaySolution.yelp-reviews-json`
+);
+
+SELECT *
+FROM `silver-charmer-243611.OneWaySolution.clustered-yelp-reviews`
+WHERE date BETWEEN '2019-04-01' AND '2019-04-30'
+  AND useful <> 0;
+
+-- delete bigquery tables
+silver-charmer-243611.OneWaySolution.clustered-yelp-reviews
+```
+
+```sql
+-- table snapshot preserves the contents of a table (called the base table) at a particular time
+-- save a snapshot of a current table, or create a snapshot of a table as it was at any time in the past seven days
+-- one hour ago 
+CREATE SNAPSHOT TABLE `silver-charmer-243611.OneWaySolution.yelp-reviews-snapshot`
+CLONE `silver-charmer-243611.OneWaySolution.yelp_reviews`
+FOR SYSTEM_TIME AS OF TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 1 HOUR);
+
+SELECT *
+FROM `silver-charmer-243611.OneWaySolution.yelp-reviews-snapshot`
+LIMIT 10;
+```
+
+```sql
+-- https://cloud.google.com/bigquery/docs/materialized-views-intro
+-- materialized views are precomputed views that periodically cache the results of a query for increased performance and efficiency
+-- zero maintenance, fresh data
+-- smart tuning = reroutes the query to use the materialized view for better performance and efficiency
+CREATE MATERIALIZED VIEW `silver-charmer-243611.OneWaySolution.m-view-reviews-per-user`
+AS 
+(
+SELECT users.user_id, 
+       SUM(users.review_count) AS reviews,
+       COUNT(reviews.stars) AS stars
+FROM `silver-charmer-243611.OneWaySolution.yelp-users-json` AS users
+INNER JOIN `silver-charmer-243611.OneWaySolution.yelp-reviews-json` AS reviews
+ON users.user_id = reviews.user_id
+GROUP BY users.user_id
+);
+
+SELECT *
+FROM `silver-charmer-243611.OneWaySolution.m-view-reviews-per-user`
+LIMIT 10;
 ```
