@@ -74,6 +74,36 @@ gcloud container --project "silver-charmer-243611" clusters delete "gke-autopilo
 ```
 
 ```shell
+# https://cloud.google.com/run/docs/quickstarts
+quickstar manuals
 
+# deploy python app into cloud run
+https://cloud.google.com/run/docs/overview/what-is-cloud-run
+https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service
+
+# /Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d3-containers-orch-mdw/app
+main.py
+requirements.txt
+Dockerfile
+.dockerignore
+
+# access folder and use the run command
+# automatically builds a container image from source and deploy
+# skaffold if you use kubernetes
+
+# build the artifact registry docker
+gcloud run deploy --help
+gcloud run deploy owshq-py-webapp --region "us-central1"
+
+https://owshq-py-webapp-gtptrhetka-uc.a.run.app
+# cloud run does not charge when the service is not in use
+
+# obs: set up continuous deployment
+
+# logs
+https://console.cloud.google.com/cloud-build/builds/b8e8763a-e847-49dc-932e-169fa94a38f1?project=568528137488
+
+# housekeeping
+gcloud run services delete owshq-py-webapp --region "us-central1"
 ```
 
