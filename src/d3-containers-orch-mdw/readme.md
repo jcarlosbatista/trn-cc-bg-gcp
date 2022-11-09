@@ -20,6 +20,7 @@ Here is the summary of what is going to be covered on this day.
 - *Deploying Big Data Products on Google Kubernetes Engine (GKE)*
 - *Deploy a Python App using Cloud Run for Lightweight Data Transformation*
 
+### google kubernetes engine
 ```shell
 # spin up gke cluster
 https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-overview
@@ -73,6 +74,7 @@ kgp
 gcloud container --project "silver-charmer-243611" clusters delete "gke-autopilot-owshq-dev" --region "us-central1"
 ```
 
+### google cloud run
 ```shell
 # https://cloud.google.com/run/docs/quickstarts
 quickstar manuals
@@ -172,6 +174,7 @@ https://itnext.io/pubsub-to-bigtable-piping-your-data-stream-in-via-gcp-cloud-fu
 - *Build materialized views*
 - *Query external data sources*
 
+### load local files
 ```shell
 # how to guides
 how-to-guides
@@ -209,6 +212,7 @@ SELECT COUNT(*)
 FROM `silver-charmer-243611.OneWaySolution.yelp-reviews-json`;
 ```
 
+### build clustered table
 ```sql
 -- improve query performance and reduce query costs.
 -- queries commonly filter on particular columns
@@ -245,6 +249,7 @@ WHERE date BETWEEN '2019-04-01' AND '2019-04-30'
 silver-charmer-243611.OneWaySolution.clustered-yelp-reviews
 ```
 
+### snapshot table
 ```sql
 -- table snapshot preserves the contents of a table (called the base table) at a particular time
 -- save a snapshot of a current table, or create a snapshot of a table as it was at any time in the past seven days
@@ -258,6 +263,7 @@ FROM `silver-charmer-243611.OneWaySolution.yelp-reviews-snapshot`
 LIMIT 10;
 ```
 
+### materialized view
 ```sql
 -- https://cloud.google.com/bigquery/docs/materialized-views-intro
 -- materialized views are precomputed views that periodically cache the results of a query for increased performance and efficiency
