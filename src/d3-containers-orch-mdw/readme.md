@@ -107,3 +107,15 @@ https://console.cloud.google.com/cloud-build/builds/b8e8763a-e847-49dc-932e-169f
 gcloud run services delete owshq-py-webapp --region "us-central1"
 ```
 
+### Google Cloud Composer
+[Parte 2 - Google Cloud Composer](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d3.2_cloud_composer.excalidraw.png).
+
+- *The DAG Skeleton: The Basics of Apache Airflow*
+- *Authoring & Scheduling Data Pipelines Efficiently*
+- *CI/CD Strategy to Build DAGs using Composer*
+
+```shell
+# create composer service
+
+
+```
