@@ -143,3 +143,18 @@ https://cloud.google.com/composer/docs/composer-2/run-apache-airflow-dag
 ```shell
 # ci/cd for dag development
 ```
+
+### Google Cloud BigTable
+[Parte 3 - Google Cloud BigTable](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d3.2_cloud_composer.excalidraw.png).
+
+- *Building a Scalable Pipeline of Real-Time Events using Google BigTable as Storage*
+
+```shell
+# bigtable = sub 10ms latency on requests
+# write examples
+https://cloud.google.com/bigtable/docs/writing-data#python
+
+* python
+* cloud functions
+* dataflow
+```
