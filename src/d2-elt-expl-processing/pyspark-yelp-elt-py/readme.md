@@ -72,11 +72,11 @@ gcloud dataproc batches submit pyspark --help
 gcloud dataproc batches submit pyspark --help 
 
 gcloud dataproc batches submit pyspark py-etl-yelp-reviews.py \
-    --batch=batch-00-py-etl-yelp-reviews --deps-bucket=gs://owshq-code-repository \
+    --batch=batch-07-py-etl-yelp-reviews --deps-bucket=gs://owshq-code-repository \
     --region=us-east1 --py-files='py-etl-yelp-reviews.py'
 
 # get execution context
-gcloud dataproc batches wait batch-00-py-etl-yelp-reviews --project silver-charmer-243611 --region us-east1
+gcloud dataproc batches wait batch-07-py-etl-yelp-reviews --project silver-charmer-243611 --region us-east1
 
 # time taken to process
 4 min 53 sec

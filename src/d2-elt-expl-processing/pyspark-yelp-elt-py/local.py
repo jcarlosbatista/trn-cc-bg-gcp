@@ -1,41 +1,74 @@
 # import libraries
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col
+from pyspark import SparkConf
 
-# init a spark session
-spark = SparkSession.builder.getOrCreate()
+# main
+if __name__ == '__main__':
 
-print(spark)
+    # init session
+    spark = SparkSession \
+            .builder \
+            .appName("etl-yelp-py") \
+            .getOrCreate()
 
-# load data
-df_device = spark.read.json("/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/files/device/*")
+    # configured parameters
+    print(SparkConf().getAll())
 
-# verify schema
-df_device.printSchema()
+    # set log level
+    spark.sparkContext.setLogLevel("INFO")
 
-# verify columns
-print(df_device.columns)
+    # spark's flow = input, transform, output
+    # input = data lake
+    # transform = enrichment
+    # output = data lake, mdw
+    get_device_file = '/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/files/device/*.json'
+    get_subscription_file = '/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/files/subscription/*.json'
 
-# count rows
-print(df_device.count())
+    # 1 = input
+    # read data
+    df_device = spark.read \
+        .format("json") \
+        .option("inferSchema", "true") \
+        .option("header", "true") \
+        .json(get_device_file)
 
-# show data
-df_device.show()
+    df_subscription = spark.read \
+        .format("json") \
+        .option("inferSchema", "true") \
+        .option("header", "true") \
+        .json(get_subscription_file)
 
-# [select] columns
-df_device.select("manufacturer", "model", "platform").show()
-df_device.select(df_device.manufacturer).show()
+    # print partitions
+    print(df_device.rdd.getNumPartitions())
+    print(df_subscription.rdd.getNumPartitions())
 
-# [select expr] columns | run sql expressions
-df_device.selectExpr("manufacturer", "model", "platform as type").show()
+    # show data
+    df_device.show()
+    df_subscription.show()
 
-# filter data
-df_device.filter(df_device.manufacturer == "Xiamomi").show()
-df_device.filter(col("manufacturer") == "Xiamomi").show()
+    # count rows
+    print(df_device.count())
+    print(df_subscription.count())
 
-# group data
-df_device.groupBy("manufacturer").count().show()
+    # sql
+    df_device.createOrReplaceTempView("vw_device")
+    df_subscription.createOrReplaceTempView("vw_subscription")
 
-# new dataframe = immutable
-df_grouped_by_manufacturer = df_device.groupBy("manufacturer").count()
-df_grouped_by_manufacturer.show()
+    # 2 = enrichment
+    df_join = spark.sql("""
+        SELECT device.user_id, 
+               device.platform, 
+               device.manufacturer,
+               subscription.payment_method,
+               subscription.plan,
+               subscription.subscription_term
+        FROM vw_device AS device
+        INNER JOIN vw_subscription AS subscription
+        ON device.user_id = subscription.user_id
+    """)
+
+    df_join.show()
+
+    # 3 = output
+    df_join.write.format("parquet").mode("overwrite").save("/Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/files/enriched")
+
