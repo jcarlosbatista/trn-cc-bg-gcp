@@ -58,26 +58,15 @@ https://helm.sh/
 https://artifacthub.io/
 
 # verify charts
-airflow
-postgresql
+mongodb
 
 # install apps 
-helm repo update
-k create namespace orchestrator
+k create namespace database
+helm install mongodb bitnami/mongodb -f /Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d3-containers-orch-mdw/kubernetes/helm-chart/mongodb/values-development.yaml -n database
 
-helm upgrade --install airflow apache-airflow/airflow -f /Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d3-containers-orch-mdw/kubernetes/helm-chart/airflow/values-development.yaml -n orchestrator
-helm ls
+kubens database
+kgp
 
-kubectl port-forward svc/airflow-webserver 8080:8080 -n orchestrator
-
-# housekeeping
-helm delete airflow -n orchestrator
-
-k delete pvc data-airflow-postgresql-0
-k delete pvc logs-airflow-worker-0
-k delete pvc logs-airflow-worker-1
-k delete pvc redis-db-airflow-redis-0
-
-k delete namespace orchestrator
+# orion platform by One Way Solution
 ```
 
