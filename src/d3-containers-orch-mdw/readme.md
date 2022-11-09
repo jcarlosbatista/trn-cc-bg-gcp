@@ -151,9 +151,13 @@ https://cloud.google.com/composer/docs/composer-2/run-apache-airflow-dag
 
 ```shell
 # bigtable = sub 10ms latency on requests
-# write examples
-https://cloud.google.com/bigtable/docs/writing-data#python
 
+# examples
+https://cloud.google.com/bigtable/docs/writing-data#python
+https://cloud.google.com/bigtable/docs/writes#simple
+https://itnext.io/pubsub-to-bigtable-piping-your-data-stream-in-via-gcp-cloud-functions-a2ef785935b5
+
+# usual implementers
 * python
 * cloud functions
 * dataflow
