@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-    <img src="https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/images/day2-summary.png" alt="Project logo">
+    <img src="https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/images/day3-summary.png" alt="Project logo">
  </a>
 </p>
 
@@ -8,14 +8,14 @@
 # Summary
 Here is the summary of what is going to be covered on this day.
 
-* Understanding Container and how to orchestrate apps 
+* Understanding container and how to orchestrate apps 
 * Data pipeline orchestration 
 * Store apps data at large scale
 * Query any shape of data using a MDW engine
 
 
 ### Google GKE & Cloud Run
-[Parte 1 - Google GKE & Cloud Run](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d2.1_data_prep.excalidraw.png).
+[Parte 1 - Google GKE & Cloud Run](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d3.1_gke_cloud_run.excalidraw.png).
 
 - *Deploying Big Data Products on Google Kubernetes Engine (GKE)*
 - *Deploy a Python App using Cloud Run for Lightweight Data Transformation*
@@ -67,6 +67,13 @@ helm install mongodb bitnami/mongodb -f /Users/luanmorenomaciel/GitHub/trn-cc-bg
 kubens database
 kgp
 
-# orion platform by One Way Solution
+# Orion platform by One Way Solution
+
+# delete cluster
+gcloud container --project "silver-charmer-243611" clusters delete "gke-autopilot-owshq-dev" --region "us-central1"
+```
+
+```shell
+
 ```
 
