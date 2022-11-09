@@ -285,3 +285,23 @@ SELECT *
 FROM `silver-charmer-243611.OneWaySolution.m-view-reviews-per-user`
 LIMIT 10;
 ```
+
+### external tables [non-bigLake external table]
+```sql
+-- has two different mechanisms for querying external data: external tables and federated queries.
+-- external = their data resides in an external source.
+-- two types of external tables = biglake tables and non-biglake external tables.
+
+-- bigLake tables [https://cloud.google.com/bigquery/docs/omni-introduction]
+https://cloud.google.com/bigquery/docs/omni-azure-create-connection
+
+-- non-bigLake external tables
+https://cloud.google.com/bigquery/docs/external-data-cloud-storage
+Cloud BigTable
+Cloud Storage
+Drive
+
+-- federated queries
+https://cloud.google.com/bigquery/docs/external-data-sources
+-- queries let you send a query statement to cloud spanner or cloud sql databases and get the result back as a temporary table
+```
