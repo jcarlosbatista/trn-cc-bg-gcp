@@ -286,7 +286,7 @@ FROM `silver-charmer-243611.OneWaySolution.m-view-reviews-per-user`
 LIMIT 10;
 ```
 
-### external tables [non-bigLake external table]
+### external tables [non-biglake external table]
 ```sql
 -- has two different mechanisms for querying external data: external tables and federated queries.
 -- external = their data resides in an external source.
@@ -304,4 +304,18 @@ Drive
 -- federated queries
 https://cloud.google.com/bigquery/docs/external-data-sources
 -- queries let you send a query statement to cloud spanner or cloud sql databases and get the result back as a temporary table
+
+
+-- cloud storage external table
+https://cloud.google.com/bigquery/docs/external-data-cloud-storage
+
+CREATE OR REPLACE EXTERNAL TABLE `silver-charmer-243611.OneWaySolution.ex-tb-gold-reviews`
+OPTIONS 
+(
+  format = 'PARQUET',
+  uris = ['gs://svc-orion-dev/files/gold_reviews/*']
+);
+
+SELECT *
+FROM `silver-charmer-243611.OneWaySolution.ex-tb-gold-reviews`
 ```
