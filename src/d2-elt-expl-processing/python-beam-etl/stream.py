@@ -1,6 +1,6 @@
 # https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline
 # https://medium.com/analytics-vidhya/transform-json-to-csv-from-google-bucket-using-a-dataflow-python-pipeline-92906c87cc96
-# PCollection = Collection fo Distributed data
+# PCollection = Collection fo Distributed Data
 # PTransform = Transformation using One or More PCollections
 # ParDo = Generic Parallel Processing
 
@@ -92,10 +92,14 @@ def run():
     with beam.Pipeline(options=pipeline_options) as p:
         (
             p
+            # pcollection
             | "ReadFromPubSub" >> beam.io.gcp.pubsub.ReadFromPubSub(
                 subscription=known_args.input_subscription, timestamp_attribute=None
             )
+            # ptransform
             | "EnrichEvents" >> beam.ParDo(CustomParsing())
+
+            # sink
             | "WriteToBigQuery" >> beam.io.WriteToBigQuery(
                 known_args.output_table,
                 schema=known_args.output_schema,

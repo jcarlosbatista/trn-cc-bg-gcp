@@ -122,7 +122,7 @@ python stream.py --runner DirectRunner
 gcloud dataflow jobs list --region us-east1    
 
 # deploy app
-python - m stream.py \
+python -m stream \
   --stream \
   --runner DataflowRunner \
   --project silver-charmer-243611 \
