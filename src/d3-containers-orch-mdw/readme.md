@@ -116,6 +116,30 @@ gcloud run services delete owshq-py-webapp --region "us-central1"
 
 ```shell
 # create composer service
+# enable cloud composer api
+https://cloud.google.com/composer/pricing#sku-composer-2
 
+# ui (kubernetes)
+environment = composer 2 (Apache Airflow)
+name = owshq-composer-development
+region = us-central1
+image = composer-2.0.30-airflow-2.3.3
+sizes = small, medium, large and custom
 
+# guides
+https://cloud.google.com/composer/docs/composer-2/run-apache-airflow-dag
+
+# add extra packages 
+```
+
+```shell
+# build first dag = skeleton
+```
+
+```shell
+# authoring & scheduling na gcp pipeline
+```
+
+```shell
+# ci/cd for dag development
 ```
