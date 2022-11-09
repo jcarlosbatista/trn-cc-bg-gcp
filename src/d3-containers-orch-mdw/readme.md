@@ -81,7 +81,7 @@ quickstar manuals
 https://cloud.google.com/run/docs/overview/what-is-cloud-run
 https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service
 
-# /Users/luanmorenomaciel/GitHub/trn-cc-bg-gcp/src/d3-containers-orch-mdw/app
+# https://github.com/owshq-plumbers/trn-cc-bg-gcp/tree/main/src/d3-containers-orch-mdw/app
 main.py
 requirements.txt
 Dockerfile
