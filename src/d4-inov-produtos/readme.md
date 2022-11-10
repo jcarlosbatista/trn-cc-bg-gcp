@@ -98,5 +98,21 @@ df.show()
 
 ```shell
 # https://cloud.google.com/blog/products/data-analytics/introducing-seamless-database-replication-to-bigquery
-https://cloud.google.com/datastream/docs/implementing-datastream-dataflow-analytics
+# https://cloud.google.com/datastream/docs/implementing-datastream-dataflow-analytics
+
+# datastream project
+https://console.cloud.google.com/datastream/streams?authuser=1&project=silver-charmer-243611&supportedpurview=project
+```
+
+### Google DataPlex
+[Parte 3 - Google DataPlex](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d4.3_dataplex.excalidraw.png).
+
+- *Govern & Explore Data Assets with Google DataPlex Engine*
+
+```shell
+# https://cloud.google.com/dataplex
+# https://cloud.google.com/dataplex/docs/introduction
+
+# google dataplex
+https://console.cloud.google.com/dataplex/search?authuser=1&project=silver-charmer-243611
 ```
