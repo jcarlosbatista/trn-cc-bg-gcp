@@ -116,3 +116,9 @@ https://console.cloud.google.com/datastream/streams?authuser=1&project=silver-ch
 # google dataplex
 https://console.cloud.google.com/dataplex/search?authuser=1&project=silver-charmer-243611
 ```
+
+### Google Cloud Spanner
+[Parte 4 - Google Cloud Spanner](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/).
+
+### Google AlloyDB for PostgreSQL
+[Parte 5 - Google AlloyDB for PostgreSQL](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/).
