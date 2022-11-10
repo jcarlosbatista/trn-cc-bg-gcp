@@ -90,3 +90,13 @@ df = spark.read \
  .load('MicrosoftAzure.yellow_tripdata_2017')
 df.show()
 ```
+
+### Google DataStream
+[Parte 2 - Google DataStream](https://github.com/owshq-plumbers/trn-cc-bg-gcp/blob/main/docs/d4.2_data_stream.excalidraw.png).
+
+- *Configure CDC from MySQL to Cloud Storage using DataStream*
+
+```shell
+# https://cloud.google.com/blog/products/data-analytics/introducing-seamless-database-replication-to-bigquery
+https://cloud.google.com/datastream/docs/implementing-datastream-dataflow-analytics
+```
