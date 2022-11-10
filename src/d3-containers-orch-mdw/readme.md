@@ -29,6 +29,7 @@ standard = pay per node (kubernetes cluster with node configuration flexibility)
 autopilot = pay per pod (optimized kubernetes cluster with a hands-off experience)
 
 name = gke-autopilot-owshq-dev
+name = gke-owshq-dev
 
 # provision autopilot cluster
 gcloud container --project "silver-charmer-243611" clusters create-auto "gke-autopilot-owshq-dev" \
