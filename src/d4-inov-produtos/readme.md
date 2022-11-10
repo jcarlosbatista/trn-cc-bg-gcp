@@ -78,7 +78,6 @@ FILTER USING (country = 'US');
 */
 ```
 
-`
 ### biglake & apache spark engine
 ```python
 from pyspark.sql import SparkSession
