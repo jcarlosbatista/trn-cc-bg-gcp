@@ -25,3 +25,7 @@ Welcome to Big Data on GCP Training, provided by Engenharia de Dados Academy, in
 
 
 <div align="center">
+
+### Files
+
+https://drive.google.com/drive/folders/1Pqm3X3x_nOf9_4YG_-w3d1AkP8uoMX5W?usp=sharing
